@@ -1,5 +1,7 @@
 package calhacks.pickup;
 
+import java.util.HashMap;
+
 public class Database {
     private HashMap<String,User> userMap = new HashMap<>();
 
@@ -19,7 +21,7 @@ public class Database {
     }
 
     public User[] getUsers () {
-        return userMap.values().toArray();
+        return (User[]) userMap.values().toArray();
     }
 
     public String[] getNames () {
