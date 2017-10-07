@@ -7,9 +7,7 @@ public class User {
         _ratings_given = 0;
         _ratings_received = 0;
         _rating = -1;
-
-        //todo - could have two databases - one to authenticate usernames/password hashes
-        //authenticate/sign in method?
+        
         d.addTo(_username,this);
     }
 
