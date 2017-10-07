@@ -17,7 +17,17 @@ public abstract class GameLocation {
         return _spots_available;
     }
 
+    public String getAddress() {
+        return _address;
+    }
+
+    public abstract boolean addCurrentUser(User user);
+
+    public abstract boolean removeCurrentUser(User user);
+
+    public abstract User[] getCurrentUsers();
+
     private boolean _in_use;
     private int _spots_available;
-    private String _adress;
+    private String _address;
 }
