@@ -7,6 +7,8 @@ public class User {
         _ratings_given = 0;
         _ratings_received = 0;
         _rating = -1;
+
+        Database.userMap.put(_username,this);
     }
 
     public void updateRating(float new_rating) {
