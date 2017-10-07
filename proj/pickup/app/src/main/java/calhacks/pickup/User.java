@@ -1,14 +1,16 @@
 package calhacks.pickup;
 
 public class User {
-    public User(String username, String password_hash) {
+    public User(String username, String password_hash, Database d) {
         _username = username;
         _password_hash = password_hash;
         _ratings_given = 0;
         _ratings_received = 0;
         _rating = -1;
 
-        Database.userMap.put(_username,this);
+        //todo - could have two databases - one to authenticate usernames/password hashes
+        //authenticate/sign in method?
+        d.addTo(_username,this);
     }
 
     public void updateRating(float new_rating) {
@@ -36,6 +38,7 @@ public class User {
     public boolean equals(User user) {
         return (_username == user.getUsername()); // User names will be unique, so we can check equals by comparing them
     }
+
 
     private float _rating;
     private int _ratings_received, _ratings_given;
