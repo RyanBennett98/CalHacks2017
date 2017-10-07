@@ -23,6 +23,10 @@ public class User {
         _ratings_given += 1;
     }
 
+    public String getPasswordHash() {
+        return _password_hash;
+    }
+
     public String getUsername() {
         return _username;
     }

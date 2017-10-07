@@ -13,6 +13,10 @@ public class Database {
         return _userMap.get(name);
     }
 
+    public boolean hasUser(String name) {
+        return _userMap.keySet().contains(name);
+    }
+
     public void removeUser (String name) {
         _userMap.remove(name);
     }

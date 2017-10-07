@@ -8,8 +8,8 @@ import java.util.HashSet;
 
 public class BasketballCourt extends GameLocation {
     public enum GameType {
-        THREEONTHREE,
-        FIVEONFIVE;
+        THREE_ON_THREE,
+        FIVE_ON_FIVE
     }
 
     @Override
@@ -47,9 +47,9 @@ public class BasketballCourt extends GameLocation {
 
     public BasketballCourt(GameType type, String address) {
         switch (type) {
-            case THREEONTHREE:
+            case THREE_ON_THREE:
                 _spots_available = _max_spots_available = 6;
-            case FIVEONFIVE:
+            case FIVE_ON_FIVE:
                 _spots_available = _max_spots_available = 10;
             default:
                 _spots_available = _max_spots_available = 10;
