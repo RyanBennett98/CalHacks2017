@@ -1,5 +1,7 @@
 package calhacks.pickup;
 
+import java.util.HashSet;
+
 /**
  * Created by ryan on 2017-10-07.
  */
@@ -25,6 +27,7 @@ public class Game {
                 _team_one.addPlayer(user);
             }
         }
+        _location.addCurrentUser(user);
         return true;
     }
 

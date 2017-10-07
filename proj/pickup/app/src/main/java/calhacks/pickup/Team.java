@@ -41,8 +41,17 @@ public class Team {
         return _size;
     }
 
+    public User[] getPlayers() {
+        return (User[]) _players.toArray();
+    }
+
     public boolean isFull() {
         return (_players.size() == _size);
+    }
+
+    public void clearTeam() {
+        _players.clear();
+        _team_rating = 0;
     }
 
     private int _size;
