@@ -12,6 +12,20 @@ public class BasketballCourt extends GameLocation {
         FIVE_ON_FIVE
     }
 
+    public BasketballCourt(GameType type, String address) {
+        switch (type) {
+            case THREE_ON_THREE:
+                _spots_available = _max_spots_available = 6;
+            case FIVE_ON_FIVE:
+                _spots_available = _max_spots_available = 10;
+            default:
+                _spots_available = _max_spots_available = 10;
+        }
+        _address = address;
+        _in_use = false;
+        _current_users = new HashSet<>();
+    }
+
     @Override
     public boolean addCurrentUser(User user) {
         if (_spots_available == 0 || _current_users.contains(user)) {
@@ -43,20 +57,6 @@ public class BasketballCourt extends GameLocation {
     @Override
     public User[] getCurrentUsers() {
         return (User[]) _current_users.toArray();
-    }
-
-    public BasketballCourt(GameType type, String address) {
-        switch (type) {
-            case THREE_ON_THREE:
-                _spots_available = _max_spots_available = 6;
-            case FIVE_ON_FIVE:
-                _spots_available = _max_spots_available = 10;
-            default:
-                _spots_available = _max_spots_available = 10;
-        }
-        _address = address;
-        _in_use = false;
-        _current_users = new HashSet<>();
     }
 
     private boolean _in_use;

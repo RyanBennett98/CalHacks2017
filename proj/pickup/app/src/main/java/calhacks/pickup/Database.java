@@ -20,7 +20,7 @@ public class Database {
     public void removeUser (String name) {
         _userMap.remove(name);
     }
-        g
+
     public HashMap<String, User> getMap(){
         return _userMap;
     }

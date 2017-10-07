@@ -17,6 +17,10 @@ public abstract class GameLocation {
         return _spots_available;
     }
 
+    public int getMaxSpotsAvailable() {
+        return _max_spots_available;
+    }
+
     public String getAddress() {
         return _address;
     }
@@ -28,6 +32,6 @@ public abstract class GameLocation {
     public abstract User[] getCurrentUsers();
 
     private boolean _in_use;
-    private int _spots_available;
+    private int _spots_available, _max_spots_available;
     private String _address;
 }
