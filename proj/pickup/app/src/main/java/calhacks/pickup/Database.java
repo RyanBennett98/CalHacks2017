@@ -3,30 +3,29 @@ package calhacks.pickup;
 import java.util.HashMap;
 
 public class Database {
-    private HashMap<String,User> userMap = new HashMap<>();
+    private HashMap<String,User> _userMap;
 
     public Database() {
+        _userMap = new HashMap<>();
     }
 
     public User getUser (String name) {
-        return userMap.get(name);
+        return _userMap.get(name);
     }
 
-    public void removeFrom (String name) {
-        userMap.remove(name);
+    public void removeUser (String name) {
+        _userMap.remove(name);
     }
 
-    public HashMap<String, User> getUserMap () {
-        return userMap;
+    public HashMap<String, User> getUserMap() {
+        return _userMap;
     }
 
     public User[] getUsers () {
-        return (User[]) userMap.values().toArray();
+        return (User[]) _userMap.values().toArray();
     }
 
     public String[] getNames () {
-        return userMap.keys().toArray();
+        return (String[]) _userMap.keySet().toArray();
     }
-
-
 }
