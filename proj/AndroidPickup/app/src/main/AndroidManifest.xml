@@ -24,9 +24,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegisterActivity" />
-
-
-        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".FriendsActivity"></activity>
     </application>
 
 </manifest>

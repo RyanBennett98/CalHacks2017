@@ -13,5 +13,9 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
     }
 
+    public void friends(View v) {
+        Intent intent = new Intent (this, FriendsActivity.class);
+        startActivity(intent);
+    }
 
 }
