@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/Users/benjaminta/.android/build-cache/fbfd50e6bb6aa0c6e9d2a09026ac4bade21ed267/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/Users/benjaminta/.android/build-cache/fbfd50e6bb6aa0c6e9d2a09026ac4bade21ed267/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    }
+]

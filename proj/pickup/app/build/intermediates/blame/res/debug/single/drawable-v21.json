@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/drawable-v21/avd_hide_password.xml",
+        "source": "/Users/benjaminta/.android/build-cache/e9030669f2a36c88d339d9e64f2f2dbe0f42b95a/output/res/drawable-v21/avd_hide_password.xml"
+    },
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml",
+        "source": "/Users/benjaminta/.android/build-cache/fbfd50e6bb6aa0c6e9d2a09026ac4bade21ed267/output/res/drawable-v21/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/Users/benjaminta/.android/build-cache/fbfd50e6bb6aa0c6e9d2a09026ac4bade21ed267/output/res/drawable-v21/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/drawable-v21/avd_show_password.xml",
+        "source": "/Users/benjaminta/.android/build-cache/e9030669f2a36c88d339d9e64f2f2dbe0f42b95a/output/res/drawable-v21/avd_show_password.xml"
+    },
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/Users/benjaminta/.android/build-cache/fbfd50e6bb6aa0c6e9d2a09026ac4bade21ed267/output/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/drawable-v21/notification_action_background.xml",
+        "source": "/Users/benjaminta/.android/build-cache/fbfd50e6bb6aa0c6e9d2a09026ac4bade21ed267/output/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/drawable-v21/design_password_eye.xml",
+        "source": "/Users/benjaminta/.android/build-cache/e9030669f2a36c88d339d9e64f2f2dbe0f42b95a/output/res/drawable-v21/design_password_eye.xml"
+    },
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/drawable-v21/design_bottom_navigation_item_background.xml",
+        "source": "/Users/benjaminta/.android/build-cache/e9030669f2a36c88d339d9e64f2f2dbe0f42b95a/output/res/drawable-v21/design_bottom_navigation_item_background.xml"
+    }
+]

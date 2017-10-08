@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/layout-v11/notification_media_cancel_action.xml",
+        "source": "/Users/benjaminta/.android/build-cache/fbfd50e6bb6aa0c6e9d2a09026ac4bade21ed267/output/res/layout-v11/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/layout-v11/notification_media_action.xml",
+        "source": "/Users/benjaminta/.android/build-cache/fbfd50e6bb6aa0c6e9d2a09026ac4bade21ed267/output/res/layout-v11/notification_media_action.xml"
+    },
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_custom.xml",
+        "source": "/Users/benjaminta/.android/build-cache/fbfd50e6bb6aa0c6e9d2a09026ac4bade21ed267/output/res/layout-v11/notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media.xml",
+        "source": "/Users/benjaminta/.android/build-cache/fbfd50e6bb6aa0c6e9d2a09026ac4bade21ed267/output/res/layout-v11/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow.xml",
+        "source": "/Users/benjaminta/.android/build-cache/fbfd50e6bb6aa0c6e9d2a09026ac4bade21ed267/output/res/layout-v11/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow_custom.xml",
+        "source": "/Users/benjaminta/.android/build-cache/fbfd50e6bb6aa0c6e9d2a09026ac4bade21ed267/output/res/layout-v11/notification_template_big_media_narrow_custom.xml"
+    }
+]

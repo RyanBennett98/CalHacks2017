@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/benjaminta/.android/build-cache/fbfd50e6bb6aa0c6e9d2a09026ac4bade21ed267/output/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/benjaminta/.android/build-cache/fbfd50e6bb6aa0c6e9d2a09026ac4bade21ed267/output/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/benjaminta/.android/build-cache/fbfd50e6bb6aa0c6e9d2a09026ac4bade21ed267/output/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/Users/benjaminta/.android/build-cache/fbfd50e6bb6aa0c6e9d2a09026ac4bade21ed267/output/res/layout-v21/notification_action.xml"
+    }
+]

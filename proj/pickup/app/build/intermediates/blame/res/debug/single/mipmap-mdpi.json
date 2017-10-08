@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher.png",
+        "source": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher_round.png",
+        "source": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+    }
+]

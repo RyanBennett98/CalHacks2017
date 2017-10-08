@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml",
+        "source": "/Users/benjaminta/.android/build-cache/fbfd50e6bb6aa0c6e9d2a09026ac4bade21ed267/output/res/color-v23/abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
+        "source": "/Users/benjaminta/.android/build-cache/fbfd50e6bb6aa0c6e9d2a09026ac4bade21ed267/output/res/color-v23/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
+        "source": "/Users/benjaminta/.android/build-cache/fbfd50e6bb6aa0c6e9d2a09026ac4bade21ed267/output/res/color-v23/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
+        "source": "/Users/benjaminta/.android/build-cache/fbfd50e6bb6aa0c6e9d2a09026ac4bade21ed267/output/res/color-v23/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
+        "source": "/Users/benjaminta/.android/build-cache/fbfd50e6bb6aa0c6e9d2a09026ac4bade21ed267/output/res/color-v23/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
+        "source": "/Users/benjaminta/.android/build-cache/fbfd50e6bb6aa0c6e9d2a09026ac4bade21ed267/output/res/color-v23/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
+        "source": "/Users/benjaminta/.android/build-cache/fbfd50e6bb6aa0c6e9d2a09026ac4bade21ed267/output/res/color-v23/abc_tint_default.xml"
+    },
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
+        "source": "/Users/benjaminta/.android/build-cache/fbfd50e6bb6aa0c6e9d2a09026ac4bade21ed267/output/res/color-v23/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
+        "source": "/Users/benjaminta/.android/build-cache/fbfd50e6bb6aa0c6e9d2a09026ac4bade21ed267/output/res/color-v23/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/color-v23/design_tint_password_toggle.xml",
+        "source": "/Users/benjaminta/.android/build-cache/e9030669f2a36c88d339d9e64f2f2dbe0f42b95a/output/res/color-v23/design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "/Users/benjaminta/CalHacks2017-master/proj/pickup/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/Users/benjaminta/.android/build-cache/fbfd50e6bb6aa0c6e9d2a09026ac4bade21ed267/output/res/color-v23/abc_color_highlight_material.xml"
+    }
+]
