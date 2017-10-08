@@ -6,18 +6,18 @@ import android.view.View;
 import android.content.Intent;
 import android.view.Window;
 
+import calhacks.pickup.Database;
+
 
 public class MainActivity extends AppCompatActivity {
-
+    public static Database pickupdb = new Database();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
         setContentView(R.layout.activity_main);
     }
 
-    public void register(View v) {
+    public void viewRegister(View v) {
         Intent intent = new Intent (this, RegisterActivity.class);
         startActivity(intent);
     }

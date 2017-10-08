@@ -36,11 +36,11 @@
         android:layout_marginLeft="39dp" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/passText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:text="Password"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
@@ -51,7 +51,7 @@
         app:layout_constraintLeft_toLeftOf="@+id/editText4" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/userText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -70,10 +70,10 @@
         android:layout_marginRight="104dp" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/registerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="profile"
+        android:onClick="registerButtonActivity"
         android:text="Register"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
