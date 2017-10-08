@@ -1,13 +1,20 @@
 package calhacks.pickup;
 
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.HashSet;
+
 public class User {
-    public User(String username, String password_hash, Database d) {
+    static private final int LAST_PLAYED_WITH_SIZE = 5;
+
+    public User(String username, String password, Database d) {
         _username = username;
-        _password_hash = password_hash;
+        _password_hash = password.hashCode();
         _ratings_given = 0;
         _ratings_received = 0;
         _rating = -1;
-
+        _friends = new HashSet<>();
+        _last_played_with = new ArrayDeque<>();
         d.addTo(_username,this);
     }
 
@@ -25,7 +32,7 @@ public class User {
         _ratings_given += 1;
     }
 
-    public String getPasswordHash() {
+    public int getPasswordHash() {
         return _password_hash;
     }
 
@@ -41,8 +48,37 @@ public class User {
         return (_username == user.getUsername()); // User names will be unique, so we can check equals by comparing them
     }
 
+    public void addFriend(User user) {
+        _friends.add(user);
+    }
 
+    public boolean removeFriend(User user) {
+        if (!_friends.contains(user)) {
+            return false;
+        } else {
+            _friends.remove(user);
+            return true;
+        }
+    }
+
+    public User[] getFriends() {
+        return (User[]) _friends.toArray();
+    }
+
+    public void addPlayedWith(User user) {
+        if (_last_played_with.size() >= LAST_PLAYED_WITH_SIZE) {
+            _last_played_with.removeLast();
+        }
+        _last_played_with.addFirst(user);
+    }
+
+    public User[] getPlayedWith() {
+        return (User[]) _last_played_with.toArray();
+    }
+
+    private HashSet<User> _friends;
+    private ArrayDeque<User> _last_played_with;
     private float _rating;
-    private int _ratings_received, _ratings_given;
-    private String _username, _password_hash;
+    private int _ratings_received, _ratings_given, _password_hash;
+    private String _username;
 }

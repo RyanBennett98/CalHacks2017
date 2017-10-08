@@ -13,7 +13,7 @@ public class Authenticator {
         if (!_database.hasUser(username)) {
             return false;
         } else {
-            return (_database.getUser(username).getPasswordHash().equals(password.hashCode()));
+            return (_database.getUser(username).getPasswordHash() == (password.hashCode()));
         }
     }
 
