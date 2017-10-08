@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     public void logInButtonActivity(View v) {
         try {
             logIn();
-            setContentView(R.layout.activity_profile);
+            profile(v);
         } catch (InvalidParameterException e) {
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
             passwordText.setText("");
