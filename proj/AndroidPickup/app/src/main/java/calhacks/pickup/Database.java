@@ -21,11 +21,22 @@ public class Database {
     public Database(InputStream input) {
         _userMap = new HashMap<>();
         String jsonString = getJsonString(input);
-        populateDatabase(jsonString);
+        jsonUsers = populateDatabase(jsonString);
     }
 
     public void addTo(String name, User u) {
-        _userMap.put(name, u);
+        if (!_userMap.containsKey(name)) {
+            _userMap.put(name, u);
+            JSONObject newUser = new JSONObject();
+            try {
+                newUser.put("username", u.getUsername());
+                newUser.put("password_hash", u.getPasswordHash());
+                newUser.put("rating", u.getRating());
+                jsonUsers.put(newUser);
+            } catch (JSONException e) {
+                System.out.println(e.getMessage());
+            }
+        }
     }
 
     private String getJsonString(InputStream input) {
@@ -44,7 +55,7 @@ public class Database {
         }
     }
 
-    private void populateDatabase(String jsonString) {
+    private JSONArray populateDatabase(String jsonString) {
         try {
             JSONObject jsonObject = new JSONObject(jsonString);
             JSONArray users = jsonObject.getJSONArray("users");
@@ -55,8 +66,10 @@ public class Database {
                 double rating = u.getDouble("rating");
                 _userMap.put(username, new User(username, password_hash, rating));
             }
+            return users;
         } catch (JSONException e) {
             System.out.println(e.getMessage());
+            return new JSONArray();
         }
     }
 
@@ -87,4 +100,10 @@ public class Database {
     public HashMap<String, User> getUserMap() {
         return _userMap;
     }
+
+    public JSONArray getJsonUsers() {
+        return jsonUsers;
+    }
+
+    private JSONArray jsonUsers;
 }

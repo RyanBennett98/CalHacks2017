@@ -8,14 +8,21 @@ import android.content.Intent;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.security.InvalidParameterException;
 
 import calhacks.pickup.Authenticator;
 import calhacks.pickup.Database;
+import calhacks.pickup.DatabaseHandler;
 import calhacks.pickup.User;
 
 public class MainActivity extends AppCompatActivity {
-    public static Database pickupdb;
+    //public static Database pickupdb;
+    public static DatabaseHandler pickupdb;
     private EditText passwordText;
     private EditText usernameText;
     private Authenticator authenticator;
@@ -24,13 +31,26 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        pickupdb = new Database(getResources().openRawResource(R.raw.users));
+        pickupdb = new DatabaseHandler(this);
+        /*File userFile = new File(getFilesDir(), "users.json");
+        FileInputStream input = null;
+        try {
+            if (!userFile.exists()) {
+                userFile.createNewFile();
+            }
+            input = new FileInputStream(userFile);
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+        pickupdb = new Database(input);*/
+        //pickupdb = new Database(getResources().openRawResource(R.raw.users));
         passwordText = (EditText) findViewById(R.id.passText);
         usernameText = (EditText) findViewById(R.id.userText);
         authenticator = new Authenticator(pickupdb);
 
-        /*User temp = new User("bob", "pass");
-        pickupdb.addTo("bob", temp);*/
+        User temp = new User("bob", "pass");
+        pickupdb.addUser(temp);
+        pickupdb.addUser(new User("steph30", "password"));
     }
 
     public void logInButtonActivity(View v) {
@@ -60,6 +80,10 @@ public class MainActivity extends AppCompatActivity {
 
     public static void setCurrentUser(User user) {
         current_user = user;
+    }
+
+    public static void addUser(User user) {
+        pickupdb.addUser(user);
     }
 
     public void viewRegister(View v) {

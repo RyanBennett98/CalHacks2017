@@ -4,11 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import java.security.InvalidParameterException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -55,11 +52,11 @@ public class RegisterActivity extends AppCompatActivity {
             throw new InvalidParameterException("Invalid username, only use letters and numbers");
         }
 
-        if (MainActivity.pickupdb.hasUser(username)) {
+        if (MainActivity.pickupdb.getUser(username) != null) {
             throw new InvalidParameterException("Username already exists");
         } else {
             User user = new User(username, password);
-            MainActivity.pickupdb.addTo(username, user);
+            MainActivity.addUser(user);
             MainActivity.setCurrentUser(user);
         }
     }

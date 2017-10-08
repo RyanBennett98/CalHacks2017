@@ -20,8 +20,6 @@ public class ProfileActivity extends AppCompatActivity {
         current_user = MainActivity.getCurrentUser();
         TextView textElement = (TextView) findViewById(R.id.textView10);
         textElement.setText(current_user.getUsername());
-
-
     }
 
     public void friends(View v) {

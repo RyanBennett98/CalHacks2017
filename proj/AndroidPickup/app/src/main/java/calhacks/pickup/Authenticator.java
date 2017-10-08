@@ -5,17 +5,18 @@ package calhacks.pickup;
  */
 
 public class Authenticator {
-    public Authenticator(Database database) {
-        _database = database;
+    public Authenticator(DatabaseHandler db) {
+        _database = db;
     }
 
     public boolean authenticate(String username, String password) {
-        if (!_database.hasUser(username)) {
+        User user = _database.getUser(username);
+        if (user == null) {
             return false;
         } else {
-            return (_database.getUser(username).getPasswordHash() == (password.hashCode()));
+            return (user.getPasswordHash() == (password.hashCode()));
         }
     }
 
-    private Database _database;
+    private DatabaseHandler _database;
 }
