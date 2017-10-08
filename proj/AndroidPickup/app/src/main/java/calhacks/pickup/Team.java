@@ -19,6 +19,10 @@ public class Team {
         } else {
             _players.add(user);
             _team_rating += user.getRating();
+            for (User teammate : _players) {
+                teammate.addPlayedWith(user);
+                user.addPlayedWith(teammate);
+            }
             return true;
         }
     }
