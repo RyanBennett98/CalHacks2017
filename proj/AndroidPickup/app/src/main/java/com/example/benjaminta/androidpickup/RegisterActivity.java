@@ -17,7 +17,6 @@ import calhacks.pickup.User;
 public class RegisterActivity extends AppCompatActivity {
     EditText usernameText;
     EditText passwordText;
-
     final Pattern STANDARD_CHARS = Pattern.compile("[a-zA-Z\\d]*");
     Matcher standardMatcher;
 
@@ -60,11 +59,8 @@ public class RegisterActivity extends AppCompatActivity {
         } else {
             User user = new User(username, password);
             MainActivity.pickupdb.addTo(username, user);
+            MainActivity.setCurrentUser(user);
         }
-    }
-
-    protected void onClick() {
-
     }
 
     public void profile(View v) {

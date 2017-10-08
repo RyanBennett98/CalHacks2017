@@ -19,11 +19,10 @@
         android:layout_marginLeft="1dp" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/usernameView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="50dp"
-        android:text="Your Name"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
         app:layout_constraintRight_toRightOf="parent"
