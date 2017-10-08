@@ -19,5 +19,9 @@ public class ProfileActivity extends AppCompatActivity {
         usernameText = (TextView) findViewById(R.id.usernameView);
     }
 
+    public void friends(View v) {
+        Intent intent = new Intent (this, FriendsActivity.class);
+        startActivity(intent);
+    }
 
 }

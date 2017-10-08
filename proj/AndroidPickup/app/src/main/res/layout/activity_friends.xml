@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.benjaminta.androidpickup.FriendsActivity">
+
+    <ImageView
+        android:layout_width="416dp"
+        android:layout_height="620dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image4"
+        android:alpha="0.6"
+        tools:layout_editor_absoluteY="-20dp"
+        android:layout_marginStart="1dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="1dp"
+        tools:layout_editor_absoluteX="-10dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Friends"
+        android:textSize="50dp"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="39dp" />
+
+</android.support.constraint.ConstraintLayout>
