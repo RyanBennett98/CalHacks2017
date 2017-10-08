@@ -21,12 +21,13 @@ public class RegisterActivity extends AppCompatActivity {
     final Pattern STANDARD_CHARS = Pattern.compile("[a-zA-Z\\d]*");
     Matcher standardMatcher;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
 
-    protected void registerButtonActivity(View v) {
+    public void registerButtonActivity(View v) {
         try {
             register();
             setContentView(R.layout.activity_profile);
@@ -62,4 +63,10 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onClick() {
 
     }
+
+    public void profile(View v) {
+        Intent intent = new Intent (this, ProfileActivity.class);
+        startActivity(intent);
+    }
+
 }

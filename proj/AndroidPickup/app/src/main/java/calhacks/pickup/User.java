@@ -7,7 +7,7 @@ import java.util.HashSet;
 public class User {
     static private final int LAST_PLAYED_WITH_SIZE = 5;
 
-    public User(String username, String password, Database d) {
+    public User(String username, String password) {
         _username = username;
         _password_hash = password.hashCode();
         _ratings_given = 0;
@@ -15,7 +15,6 @@ public class User {
         _rating = -1;
         _friends = new HashSet<>();
         _last_played_with = new ArrayDeque<>();
-        d.addTo(_username,this);
     }
 
     public void updateRating(float new_rating) {
