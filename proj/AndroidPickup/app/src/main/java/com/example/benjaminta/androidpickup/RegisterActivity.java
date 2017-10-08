@@ -32,7 +32,7 @@ public class RegisterActivity extends AppCompatActivity {
     public void registerButtonActivity(View v) {
         try {
             register();
-            setContentView(R.layout.activity_profile);
+            profile(v);
         } catch (InvalidParameterException e) {
             System.out.println(e.getMessage());
         }

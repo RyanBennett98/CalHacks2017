@@ -2,9 +2,11 @@ package com.example.benjaminta.androidpickup;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutCompat;
 import android.view.View;
 import android.content.Intent;
 import android.widget.TextView;
+import android.widget.LinearLayout;
 
 import calhacks.pickup.User;
 
@@ -16,7 +18,10 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         current_user = MainActivity.getCurrentUser();
-        usernameText = (TextView) findViewById(R.id.usernameView);
+        TextView textElement = (TextView) findViewById(R.id.textView10);
+        textElement.setText(current_user.getUsername());
+
+
     }
 
     public void friends(View v) {
