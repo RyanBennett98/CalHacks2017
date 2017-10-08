@@ -18,6 +18,7 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         current_user = MainActivity.getCurrentUser();
+        current_user.setUpFriends(this);
         TextView textElement = (TextView) findViewById(R.id.textView10);
         textElement.setText(current_user.getUsername());
     }

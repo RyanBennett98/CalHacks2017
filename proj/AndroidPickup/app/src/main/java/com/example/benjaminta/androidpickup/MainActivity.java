@@ -6,6 +6,8 @@ import android.view.View;
 import android.content.Intent;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import java.io.File;
 import java.security.InvalidParameterException;
 import calhacks.pickup.Authenticator;
 import calhacks.pickup.DatabaseHandler;

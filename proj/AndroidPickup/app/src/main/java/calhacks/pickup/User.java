@@ -1,5 +1,20 @@
 package calhacks.pickup;
 
+import android.content.Context;
+import android.database.sqlite.SQLiteOpenHelper;
+
+import com.example.benjaminta.androidpickup.*;
+import com.example.benjaminta.androidpickup.MainActivity;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -68,6 +83,36 @@ public class User {
         } else {
             _friends.remove(user);
             return true;
+        }
+    }
+
+    public void setUpFriends(Context context) {
+        File friendFile;
+        try {
+            String filename = _username + "_friends.txt";
+            String friendName;
+            friendFile = new File(context.getFilesDir(), filename);
+            BufferedReader reader = new BufferedReader(new FileReader(friendFile));
+            while ((friendName = reader.readLine()) != null) {
+                addFriend(MainActivity.pickupdb.getUser(friendName));
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public void addFriend(Context context, User user) {
+        File friendFile;
+        try {
+            String filename = _username + "_friends.txt";
+            friendFile = new File(context.getFilesDir(), filename);
+            FileWriter fileWriter = new FileWriter(friendFile, true);
+            PrintWriter output = new PrintWriter(new BufferedWriter(fileWriter));
+            output.println(user.getUsername());
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
         }
     }
 
