@@ -1,10 +1,12 @@
 package com.example.benjaminta.androidpickup;
 
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.content.Intent;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.security.InvalidParameterException;
 
@@ -12,9 +14,8 @@ import calhacks.pickup.Authenticator;
 import calhacks.pickup.Database;
 import calhacks.pickup.User;
 
-
 public class MainActivity extends AppCompatActivity {
-    public static Database pickupdb = new Database();
+    public static Database pickupdb;
     private EditText passwordText;
     private EditText usernameText;
     private Authenticator authenticator;
@@ -23,13 +24,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        pickupdb = new Database(getResources().openRawResource(R.raw.users));
         passwordText = (EditText) findViewById(R.id.passText);
         usernameText = (EditText) findViewById(R.id.userText);
         authenticator = new Authenticator(pickupdb);
 
-        User temp = new User("bob", "pass");
-        pickupdb.addTo("bob", temp);
+        /*User temp = new User("bob", "pass");
+        pickupdb.addTo("bob", temp);*/
     }
 
     public void logInButtonActivity(View v) {
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             logIn();
             setContentView(R.layout.activity_profile);
         } catch (InvalidParameterException e) {
-            System.out.println(e.getMessage());
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
             passwordText.setText("");
         }
 

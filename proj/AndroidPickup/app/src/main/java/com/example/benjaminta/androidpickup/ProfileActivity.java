@@ -10,14 +10,26 @@ import calhacks.pickup.User;
 
 public class ProfileActivity extends AppCompatActivity {
     private static User current_user;
-    private TextView usernameText;
+    private TextView usernameText, ratingText;
+
+    public final String USERNAME = current_user.getUsername();
+    public final String RATING = "" + current_user.getRating();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         current_user = MainActivity.getCurrentUser();
         usernameText = (TextView) findViewById(R.id.usernameView);
+        ratingText = (TextView) findViewById(R.id.ratingView);
     }
+
+
+
+    public void updateText() {
+        usernameText.setText(USERNAME);
+        ratingText.append(RATING);
+    }
+
 
     public void friends(View v) {
         Intent intent = new Intent (this, FriendsActivity.class);

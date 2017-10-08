@@ -12,12 +12,22 @@ public class User {
         _password_hash = password.hashCode();
         _ratings_given = 0;
         _ratings_received = 0;
-        _rating = -1;
+        _rating = -1.0;
         _friends = new HashSet<>();
         _last_played_with = new ArrayDeque<>();
     }
 
-    public void updateRating(float new_rating) {
+    public User(String username, int password_hash, double rating) {
+        _username = username;
+        _password_hash = password_hash;
+        _ratings_given = 0;
+        _ratings_received = 0;
+        _rating = rating;
+        _friends = new HashSet<>();
+        _last_played_with = new ArrayDeque<>();
+    }
+
+    public void updateRating(double new_rating) {
         _ratings_received += 1;
         if (_rating < 0) {
             _rating = new_rating;
@@ -26,7 +36,7 @@ public class User {
         }
     }
 
-    public void giveRating(float rating, User user) {
+    public void giveRating(double rating, User user) {
         user.updateRating(rating);
         _ratings_given += 1;
     }
@@ -77,7 +87,7 @@ public class User {
 
     private HashSet<User> _friends;
     private ArrayDeque<User> _last_played_with;
-    private float _rating;
+    private double _rating;
     private int _ratings_received, _ratings_given, _password_hash;
     private String _username;
 }

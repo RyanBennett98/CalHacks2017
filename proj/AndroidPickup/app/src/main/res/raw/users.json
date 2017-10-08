@@ -1,0 +1,19 @@
+{
+  "users":[
+    {
+      "username": "bob",
+      "password_hash": 3433489,
+      "rating": 3.42
+    },
+    {
+      "username": "steph30",
+      "password_hash": 1216985755,
+      "rating": 4.91
+    },
+    {
+      "username": "actualDog",
+      "password_hash": 99644,
+      "rating": 2.01
+    }
+  ]
+}

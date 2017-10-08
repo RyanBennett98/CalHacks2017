@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.security.InvalidParameterException;
 import java.util.regex.Matcher;
@@ -34,7 +35,7 @@ public class RegisterActivity extends AppCompatActivity {
             register();
             setContentView(R.layout.activity_profile);
         } catch (InvalidParameterException e) {
-            System.out.println(e.getMessage());
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
 
