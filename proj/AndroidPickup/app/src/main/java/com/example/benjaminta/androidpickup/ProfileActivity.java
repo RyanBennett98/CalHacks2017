@@ -27,4 +27,10 @@ public class ProfileActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void maps(View v) {
+        Intent intent = new Intent (this, MapsActivity.class);
+        startActivity(intent);
+    }
+
+
 }
