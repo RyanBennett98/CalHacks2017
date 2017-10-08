@@ -1,22 +1,13 @@
 package com.example.benjaminta.androidpickup;
 
-import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.content.Intent;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.security.InvalidParameterException;
-
 import calhacks.pickup.Authenticator;
-import calhacks.pickup.Database;
 import calhacks.pickup.DatabaseHandler;
 import calhacks.pickup.User;
 
@@ -48,9 +39,9 @@ public class MainActivity extends AppCompatActivity {
         usernameText = (EditText) findViewById(R.id.userText);
         authenticator = new Authenticator(pickupdb);
 
-        User temp = new User("bob", "pass");
-        pickupdb.addUser(temp);
-        pickupdb.addUser(new User("steph30", "password"));
+        //User temp = new User("bob", "pass");
+        //pickupdb.addUser(temp);
+        //pickupdb.addUser(new User("steph30", "password"));
     }
 
     public void logInButtonActivity(View v) {

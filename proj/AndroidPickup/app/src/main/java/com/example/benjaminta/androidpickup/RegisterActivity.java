@@ -52,7 +52,7 @@ public class RegisterActivity extends AppCompatActivity {
             throw new InvalidParameterException("Invalid username, only use letters and numbers");
         }
 
-        if (MainActivity.pickupdb.getUser(username) != null) {
+        if (MainActivity.pickupdb.getUser(username) != User.EMPTY_USER) {
             throw new InvalidParameterException("Username already exists");
         } else {
             User user = new User(username, password);

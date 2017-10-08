@@ -52,9 +52,13 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(TABLE_USERS, new String[] {KEY_USERNAME, KEY_PASSWORD_HASH, KEY_RATING},
                 KEY_USERNAME + "=?", new String[] {username}, null, null, null, null);
-        if (cursor != null) cursor.moveToFirst();
-        User foundUser = new User(cursor.getString(0), cursor.getInt(1), cursor.getDouble(2));
-        return foundUser;
+        if (cursor.moveToFirst()){
+            User foundUser = new User(cursor.getString(0), cursor.getInt(1), cursor.getDouble(2));
+            return foundUser;
+        } else {
+            return User.EMPTY_USER;
+        }
+
     }
 
     public List<User> getAllUsers() {

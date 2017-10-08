@@ -11,7 +11,7 @@ public class Authenticator {
 
     public boolean authenticate(String username, String password) {
         User user = _database.getUser(username);
-        if (user == null) {
+        if (user == User.EMPTY_USER) {
             return false;
         } else {
             return (user.getPasswordHash() == (password.hashCode()));

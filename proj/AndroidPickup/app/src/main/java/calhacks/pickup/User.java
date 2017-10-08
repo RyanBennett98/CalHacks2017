@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 public class User {
+    static public final User EMPTY_USER = new User("NO_USERNAME", "NO_PASSWORD");
     static private final int LAST_PLAYED_WITH_SIZE = 5;
 
     public User(String username, String password) {
