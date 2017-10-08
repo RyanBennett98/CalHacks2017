@@ -15,8 +15,8 @@ import java.util.regex.Pattern;
 import calhacks.pickup.User;
 
 public class RegisterActivity extends AppCompatActivity {
-    EditText usernameText = (EditText) findViewById(R.id.userText);
-    EditText passwordText = (EditText) findViewById(R.id.passText);
+    EditText usernameText;
+    EditText passwordText;
 
     final Pattern STANDARD_CHARS = Pattern.compile("[a-zA-Z\\d]*");
     Matcher standardMatcher;
@@ -26,6 +26,8 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register2);
+        usernameText = (EditText) findViewById(R.id.userText);
+        passwordText = (EditText) findViewById(R.id.passText);
     }
 
     public void registerButtonActivity(View v) {
