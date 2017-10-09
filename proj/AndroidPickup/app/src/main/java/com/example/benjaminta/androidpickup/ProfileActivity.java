@@ -21,6 +21,8 @@ public class ProfileActivity extends AppCompatActivity {
         current_user.setUpFriends(this);
         TextView textElement = (TextView) findViewById(R.id.textView10);
         textElement.setText(current_user.getUsername());
+        textElement = (TextView) findViewById(R.id.textView11);
+        textElement.append(": " + current_user.getRating());
     }
 
     public void friends(View v) {
