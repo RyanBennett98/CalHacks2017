@@ -25,6 +25,13 @@ public class ProfileActivity extends AppCompatActivity {
         textElement.append(": " + current_user.getRating());
     }
 
+    public void logOutButtonActivity(View v) {
+        Intent intent = new Intent (this, MainActivity.class);
+        MainActivity.setCurrentUser(null);
+        current_user = null;
+        startActivity(intent);
+    }
+
     public void friends(View v) {
         Intent intent = new Intent (this, FriendsActivity.class);
         startActivity(intent);
