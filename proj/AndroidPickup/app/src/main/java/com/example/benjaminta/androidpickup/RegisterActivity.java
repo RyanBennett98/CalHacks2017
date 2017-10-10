@@ -12,6 +12,8 @@ import java.util.regex.Pattern;
 
 import calhacks.pickup.User;
 
+import static com.example.benjaminta.androidpickup.MainActivity.pickupdb;
+
 public class RegisterActivity extends AppCompatActivity {
     EditText usernameText;
     EditText passwordText;
@@ -52,12 +54,12 @@ public class RegisterActivity extends AppCompatActivity {
             throw new InvalidParameterException("Invalid username, only use letters and numbers");
         }
 
-        if (MainActivity.pickupdb.getUser(username) != User.EMPTY_USER) {
+        if (pickupdb.getUser(username) != User.EMPTY_USER) {
             throw new InvalidParameterException("Username already exists");
         } else {
-            User user = new User(username, password);
-            MainActivity.addUser(user);
-            MainActivity.setCurrentUser(user);
+            User newUser = new User(username, password);
+            pickupdb.addUser(newUser);
+            MainActivity.setCurrentUser(newUser);
         }
     }
 

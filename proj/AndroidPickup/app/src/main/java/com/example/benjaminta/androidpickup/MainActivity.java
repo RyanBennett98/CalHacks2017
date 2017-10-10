@@ -2,6 +2,7 @@ package com.example.benjaminta.androidpickup;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.content.Intent;
 import android.widget.EditText;
@@ -14,36 +15,27 @@ import calhacks.pickup.DatabaseHandler;
 import calhacks.pickup.User;
 
 public class MainActivity extends AppCompatActivity {
-    //public static Database pickupdb;
-    public static DatabaseHandler pickupdb;
+    /* TODO
+    - Convert from MainActivity to LogInActivity (This shouldn't be where we set everything up
+    - Create new main activity that does all the pre-auth things. This will be the start splash page
+     */
+    public static DatabaseHandler pickupdb; // Creates a new database handler which will send SQL requests
     private EditText passwordText;
     private EditText usernameText;
     private Authenticator authenticator;
-    private static User current_user;
+    private static User current_user; // Pointer to current user. Initialized upon login or registration
+    boolean freshPassword;
+    boolean freshUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         pickupdb = new DatabaseHandler(this);
-        /*File userFile = new File(getFilesDir(), "users.json");
-        FileInputStream input = null;
-        try {
-            if (!userFile.exists()) {
-                userFile.createNewFile();
-            }
-            input = new FileInputStream(userFile);
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-        pickupdb = new Database(input);*/
-        //pickupdb = new Database(getResources().openRawResource(R.raw.users));
         passwordText = (EditText) findViewById(R.id.passText);
         usernameText = (EditText) findViewById(R.id.userText);
         authenticator = new Authenticator(pickupdb);
-
-        //User temp = new User("bob", "pass");
-        //pickupdb.addUser(temp);
-        //pickupdb.addUser(new User("steph30", "password"));
+        freshPassword = true;
+        freshUser = true;
     }
 
     public void logInButtonActivity(View v) {
@@ -55,6 +47,21 @@ public class MainActivity extends AppCompatActivity {
             passwordText.setText("");
         }
 
+    }
+
+    public void userTextOnClick(View v) {
+        if (freshUser) {
+            usernameText.setText("");
+            freshUser = false;
+        }
+    }
+
+    public void passTextOnClick(View v) {
+        if (freshPassword) {
+            passwordText.setText("");
+            passwordText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+            freshPassword = false;
+        }
     }
 
     public void logIn() throws InvalidParameterException{
@@ -73,10 +80,6 @@ public class MainActivity extends AppCompatActivity {
 
     public static void setCurrentUser(User user) {
         current_user = user;
-    }
-
-    public static void addUser(User user) {
-        pickupdb.addUser(user);
     }
 
     public void viewRegister(View v) {

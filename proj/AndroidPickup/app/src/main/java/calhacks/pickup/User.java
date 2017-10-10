@@ -127,6 +127,11 @@ public class User {
         _last_played_with.addFirst(user);
     }
 
+    /* rating setter used for debug */
+    public void setRating(double rating) {
+        _rating = rating;
+    }
+
     public User[] getPlayedWith() {
         return (User[]) _last_played_with.toArray();
     }
